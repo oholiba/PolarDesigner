@@ -113,7 +113,7 @@ private:
 #if JUCE_IOS
  auto assetsDir = File::getSpecialLocation (File::currentExecutableFile)
                        .getParentDirectory().getChildFile ("Assets");
-#elif JUCE_MAC
+#elif JUCE_MAC || JUCE_WINDOWS
  auto assetsDir = File::getSpecialLocation (File::currentExecutableFile)
                        .getParentDirectory().getParentDirectory().getChildFile ("Resources").getChildFile ("Assets");
 #endif
